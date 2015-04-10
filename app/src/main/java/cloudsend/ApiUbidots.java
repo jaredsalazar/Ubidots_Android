@@ -12,9 +12,9 @@ public class ApiUbidots extends AsyncTask<Integer, Void, Void> {
     @Override
     protected Void doInBackground(Integer... params) {
         ApiClient apiClient = new ApiClient(API_KEY);
-        Variable batteryLevel = apiClient.getVariable(VARIABLE_ID);
+        Variable Status = apiClient.getVariable(VARIABLE_ID);
 
-        batteryLevel.saveValue(params[0]);
+        Status.saveValue(params[0]);
         return null;
     }
 }
